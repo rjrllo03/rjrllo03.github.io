@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regina — Computational Social Science & Politics</title>
+  <meta name="description" content="Regina — researcher in computational social science and politics" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ink cursor: a trail of dots melted together by an SVG gooey filter,
+       so the cursor stretches like ink (technique from Ricardo Mendieta's
+       "Ink Cursor"). Dots are generated in script.js. -->
+  <svg class="goo-defs" width="0" height="0" aria-hidden="true">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="11" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+  <div class="ink" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+ <a class="nav__brand" href="#">Regina<span>.</span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <span class="nav__slider" aria-hidden="true"></span>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== (dark — building photo background) -->
+    <section class="hero" id="hero" data-cursor="light">
+      <div class="hero__inner">
+        <div class="hero__text reveal">
+          <p class="eyebrow">Computational Social Science · Politics</p>
+          <h1 class="hero__title">
+            
+            <span class="ink-orange">Data Systems</span>
+            <span class="ink-green"></span> for
+            <span class="ink-purple">Social Research</span>.
+          </h1>
+          <p class="hero__lede">
+            I'm Regina, I work at the intersection of technology and social behavior. Through an interdiciplnary approach I hope to better my understanding on how each shape the other.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#projects">View projects</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <figure class="hero__media reveal">
+          <img src="../assets/portrait.jpeg" alt="Portrait of Regina" />
+          <figcaption>Regina</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE STRIP ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Data Analysis</span><span class="dot">●</span>
+        <span>Infrastructure design</span><span class="dot">●</span>
+        <span>Text as Data</span><span class="dot">●</span>
+        <span>Front end Design</span><span class="dot">●</span>
+        <span>Data Analysis</span><span class="dot">●</span>
+        <span>Political Behavior</span><span class="dot">●</span>
+        <span>Text as Data</span><span class="dot">●</span>
+        <span>Digital Systems</span><span class="dot">●</span>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+      <div class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__body reveal">
+          <p class="lead">
+            I am interested in how
+          sets of behavioral data can turn into insights about politics and society. 
+          
+    
+          </p>
+          <p>
+            My research combines statistical methods, employment of LLMs in text-as-data applications, network
+            analysis and traditional social science methods. Recently I have been exploring data system design and fullstack development to build digital infrastructure that is first and foremost GDPR-compliant.
+          </p>
+         <p>
+  I am currently working on <a href="https://taalbubbl.org" style="color: #f4a81b;">taalbubbl</a> an app to help people learn Dutch through social learning.
+</p>
+          <ul class="about__facts">
+            <li><strong>Based in</strong><span>Amsterdam, Netherlands</span></li>
+            <li><strong>Focus</strong><span>Political and Social <Blockquote></Blockquote>Behavior · Text-as-data</span></li>
+            <li><strong>Technologies</strong><span>Python · R · SQL · Rust</span></li>
+          </ul>
+        </div>
+        <figure class="about__media reveal">
+          <img src="computer.png" alt="Architectural detail — green tower and ivy" />
+
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== ACADEMIC TRAJECTORY (where & what I studied) ===== -->
+    <section class="education" id="education">
+      <div class="section-head reveal">
+        <span class="section-num">02</span>
+        <h2>Academic trajectory</h2>
+      </div>
+      <!-- EDIT each entry: years, degree, field, university, city, and a one-line
+           note. Add/remove <li> blocks freely. Listed most recent first. -->
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__year">2023 — 2026</span>
+          <div class="timeline__body">
+            <h3>BA, Computational Social Science</h3>
+            <p class="timeline__place">University of Amsterdam · Amsterdam, Netherlands</p>
+            <p class="timeline__note">Thesis: One Task a Day keeps English Away: How Facilitated L2 Contact via an App Affects Willingness to Communicate in Dutch</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__year">2021 — 2023</span>
+          <div class="timeline__body">
+            <h3>BA, Political Science</h3>
+            <p class="timeline__place">University of Amsterdam · Amsterdam, Netherlands</p>
+            <p class="timeline__note"> Thesis: Affective Polarization Towards the Redistributive Role of State:
+ A Study of Mexico’s Welfare Policy on Healthcare
+</p>
+          </div>
+      </ol>
+    </section>
+
+    <!-- ===== SELECTED WORK ===== -->
+    <section class="projects" id="projects">
+      <div class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2>Selected Projects</h2>
+      </div>
+      <div class="fill">
+        <!-- EDIT each project — fill the [brackets], link to the paper/repo/demo -->
+        <a class="project reveal" href="https://taalbubbl.org">
+          <div class="project__index">2026</div>
+          <div class="project__main">
+            <h3>Taalbubbl: Learning Dutch Through Social Interactions</h3>
+            <p>A mobile app designed to facilitate language learning through social interaction.</p>
+          </div>
+          <div class="project__meta">
+            <span class="tag">Full-stack design</span>
+            <span class="tag">Rust</span>
+            <span class="tag">LLM</span>
+          </div>
+          <span class="project__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="project reveal" href="https://merijnvervoorn.com/coalitie-voorspeller/index.html">
+          <div class="project__index">2024</div>
+          <div class="project__main">
+            <h3>Algorithms to Predict Coalition Formation in Parliamentary Systems</h3>
+            <p>A set of algorithms to predict coalition formation in The Netherlands.</p>
+          </div>
+          <div class="project__meta">
+            <span class="tag">Text-as-data</span>
+            <span class="tag">LLM</span>
+            <span class="tag">ML</span>
+          </div>
+          <span class="project__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="project reveal" href="https://drive.google.com/file/d/16ubrWkFEtHLSNX_Zz8u0M3EEbHsmztEa/view?usp=sharing">
+          <div class="project__index">2023</div>
+          <div class="project__main">
+            <h3>Roadmap for Change: Railway Sentiment Analysis</h3>
+            <p>An analysis of railway intermobility on how open and closed markets affect consumer behavior.</p>
+          </div>
+          <div class="project__meta">
+            <span class="tag">Causal inference</span>
+            <span class="tag">2024</span>
+          </div>
+          <span class="project__arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== WRITING ===== -->
+    <section class="skills" id="skills">
+      <div class="section-head reveal">
+        <span class="section-num">04</span>
+        <h2>Skills &amp; Hobbies</h2>
+      </div>
+      <div class="skills__grid">
+        <!-- EDIT freely: rename a group, add/remove tags. -->
+        <div class="skillset reveal">
+          <p class="skillset__label">Computation &amp; data</p>
+          <ul class="skillset__tags">
+            <li>Python</li>
+            <li>R</li>
+            <li>SQL</li>
+            <li>NLP</li>
+            <li>Machine learning</li>
+            <li>Data visualization</li>
+          </ul>
+        </div>
+        <div class="skillset reveal">
+          <p class="skillset__label">Research methods</p>
+          <ul class="skillset__tags">
+            <li>Causal inference</li>
+            <li>Text-as-data</li>
+            <li>Network analysis</li>
+            <li>Survey design</li>
+             <li>Ethnographic research</li>
+            <li>Statistics</li>
+          </ul>
+        </div>
+        <div class="skillset reveal">
+          <!-- your art, framed as a professional asset -->
+          <p class="skillset__label">Visual &amp; creative</p>
+          <ul class="skillset__tags">
+            <li>Illustration</li>
+            <li>Visual design</li>
+            <li>Photography</li>
+            <li>Prototyping</li>
+            <li>Creative Technology</li>
+          </ul>
+        </div>
+        <div class="skillset reveal">
+          <p class="skillset__label">Personal interests</p>
+          <ul class="skillset__tags">
+            <!-- EDIT: your personal interests -->
+            <li>Politics</li>
+            <li>Education</li>
+            <li>Healthcare</li>
+            <li>Art History</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== (dark — purple) -->
+    <section class="contact" id="contact" data-cursor="light">
+      <div class="contact__inner reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="contact__title">Let’s talk.</h2>
+        <a class="contact__email" href="mailto:rjarillo@gmail.com">rjarillo@gmail.com</a>
+        <p class="contact__sub">Open to career opportunities, research collaborations, and talks.</p>
+        <div class="contact__links">
+          <a href="https://www.linkedin.com/in/regina-jarillo-romo-001210226/">LinkedIn</a>
+          <a href="https://github.com/rjrllo03">GitHub</a>
+          <a href="https://drive.google.com/file/d/1Y-XHXskvErXxbnKcAnK-k9elNniEUMth/view?usp=sharing">CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Regina Jarillo</span>
+    <a href="#">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
