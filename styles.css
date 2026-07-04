@@ -1,3 +1,8 @@
+/* ============================================================
+   Regina — Portfolio
+   Palette pulled from the two photos:
+   orange wall, aubergine turtleneck, green tower + ivy.
+   ============================================================ */
 
 :root {
   --orange: #e85d24;
@@ -30,7 +35,7 @@ body {
   background-color: var(--cream);
   background-image:
     linear-gradient(color-mix(in srgb, var(--cream) 10%, transparent), color-mix(in srgb, var(--cream) 10%, transparent)),
-    url("../assets/stripes.svg");
+    url("assets/stripes.svg");
   background-size: cover, 1600px auto;
   background-position: top center, top center;
   background-repeat: no-repeat, repeat-y;
@@ -142,7 +147,7 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background-image: url("../assets/building.jpg");
+  background-image: url("assets/building.jpg");
   background-size: cover;
   background-position: 50% 32%;
   max-width: none;
