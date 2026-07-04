@@ -17,9 +17,7 @@ links.querySelectorAll("a").forEach((a) =>
   })
 );
 
-// ---------- scroll reveal ----------
-// toggles both ways: content fades in as it enters the viewport and fades
-// back out as it scrolls past (up or down), instead of revealing once
+
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -64,7 +62,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
     moveTo(a);
   };
 
-  // hover: glide to the hovered link, snap back to the active one on leave
+
   anchors.forEach((a) => a.addEventListener("mouseenter", () => moveTo(a)));
   navLinks.addEventListener("mouseleave", () => moveTo(activeAnchor));
 
@@ -88,7 +86,6 @@ document.getElementById("year").textContent = new Date().getFullYear();
   onScroll(); // initial state
 })();
 
-// ---------- Ink Cursor: gooey trailing dots (à la Ricardo Mendieta) ----------
 (() => {
   const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -97,7 +94,6 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
   document.documentElement.classList.add("has-custom-cursor");
 
-  // build a tapered chain of dots; the goo filter melts them into liquid ink
   const COUNT = 16;
   const dots = [];
   for (let i = 0; i < COUNT; i++) {
@@ -124,14 +120,10 @@ document.getElementById("year").textContent = new Date().getFullYear();
     scale += (tScale - scale) * 0.15;
     for (let i = 0; i < dots.length; i++) {
       const dot = dots[i];
-      // head chases the mouse; each following dot chases the one ahead, so
-      // fast moves stretch the chain into an ink streak that then settles.
+
       const lead = i === 0 ? { x: mx, y: my } : dots[i - 1];
       dot.x += (lead.x - dot.x) * 0.36;
       dot.y += (lead.y - dot.y) * 0.36;
-      // idle "alive" wobble: a slow, phase-shifted oscillation that grows
-      // toward the tail, so the gooey shape keeps undulating even when the
-      // mouse is perfectly still. The head (i=0) stays locked to the pointer.
       const k = i / (dots.length - 1);
       const wx = Math.sin(now * 0.0016 + i * 0.9) * 8 * k;
       const wy = Math.cos(now * 0.0021 + i * 0.9) * 8 * k;
@@ -151,13 +143,11 @@ document.getElementById("year").textContent = new Date().getFullYear();
   });
 })();
 
-// ---------- Perched study buddy (cat) ----------
 (() => {
   const buddy = document.querySelector(".buddy");
   if (!buddy || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
   const looks = buddy.querySelectorAll(".cat__look");
 
-  // doze when the mouse has been still for a while
   let idle;
   const wake = () => {
     buddy.classList.remove("buddy--sleep");
